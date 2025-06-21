@@ -1,11 +1,11 @@
 <div
-  class="h-screen bg-gradient-to-br from-pink-300 via-yellow-200 via-green-300 via-blue-300 to-purple-300 flex justify-center items-center"
+  class="h-screen bg-cover bg-center flex justify-center items-center"
 >
   <div class="bg-white bg-opacity-90 shadow-md rounded-lg p-8 w-96">
-    <div class="font-bold text-2xl text-center mb-6 text-gray-800">Login</div>
+    <div class="font-bold text-2xl text-center mb-6">Login</div>
 
     <div class="mb-4">
-      <label class="block font-medium mb-1 text-gray-700">Username</label>
+      <label class="block font-medium mb-1">Username</label>
       <input
         [(ngModel)]="username"
         class="w-full border rounded p-2 "
@@ -13,14 +13,26 @@
     </div>
 
     <div class="mb-4">
-      <label class="block font-medium mb-1 text-gray-700">Password</label>
+      <label class="block font-medium mb-1">Password</label>
       <input
         [(ngModel)]="password"
         type="password"
         class="w-full border rounded p-2 "
       />
     </div>
+    <!-- <div class="flex justify-between">
+      <div
+        class="text-right text-sm text-blue-600 cursor-pointer mb-6"
+        (click)="signUp()"
+      >
+        Sign Up
+      </div>
+      <div class="text-right text-sm text-blue-600 cursor-pointer mb-6">
+        Forgot Password?
+      </div>
+    </div> -->
 
+    <!-- 🔻 Place error message here -->
     <div *ngIf="errorMessage" class="text-red-500 text-sm mb-4 text-center">
       {{ errorMessage }}
     </div>
@@ -29,7 +41,7 @@
       <button
         type="button"
         (click)="onSubmit()"
-        class="text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 w-full"
+        class="text-white bg-green-700  font-medium rounded-lg text-sm px-5 py-2.5 w-full"
       >
         Login
       </button>

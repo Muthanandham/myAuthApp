@@ -1,0 +1,12 @@
+:host {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../../../assets/car_bg.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
