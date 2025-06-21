@@ -7,18 +7,20 @@
 /bazel-out
 
 # Node
-/node_modules
+/Front-End/node_modules
+/Back-End/node_modules
+
 npm-debug.log
 yarn-error.log
 
 # IDEs and editors
-.idea/
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
+/Front-End/.idea/
+/Front-End/.project
+/Front-End/.classpath
+/Front-End/.c9/
+/Front-End/*.launch
+/Front-End/.settings/
+/Front-End/*.sublime-workspace
 
 # Visual Studio Code
 .vscode/*
@@ -29,7 +31,7 @@ yarn-error.log
 .history/*
 
 # Miscellaneous
-/.angular/cache
+/Front-End/.angular/cache
 .sass-cache/
 /connect.lock
 /coverage

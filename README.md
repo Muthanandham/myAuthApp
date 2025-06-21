@@ -1,59 +1,51 @@
-# ProjectUntitled
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.0.3.
 
 ## Development server
 
 To start a local development server, run:
 
+
+### FOR API SERVER 
 ```bash
+
+cd Back-End
+
+node server.js
+```
+
+### FOR UI
+
+
+```bash
+
+cd Back-End
+
 ng serve
+
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+To connect into UI Home pages you need to setup my sql in you system and also create databases in mysql and create username and password because sign up functionality is not handled
 
-## Code scaffolding
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Set Up MySQl in Your system and connect it through a terminal
 
-```bash
-ng generate component component-name
-```
+CREATE DATABASE canabil_games;
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+USE canabil_games;
 
-```bash
-ng generate --help
-```
+CREATE TABLE users (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  username VARCHAR(255) NOT NULL,
+  password VARCHAR(255) NOT NULL
+);
 
-## Building
 
-To build the project run:
+INSERT INTO users (username, password) VALUES ('admin', 'admin');
 
-```bash
-ng build
-```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+ host: 'localhost',
+user: 'root',
+password: 'your_password',
+database: 'canabil_games'
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+update password in the Back-End/src/server.js
